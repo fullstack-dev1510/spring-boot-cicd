@@ -14,13 +14,13 @@ pipeline {
 
 		stage('Build'){
 			steps {
-				bat 'mvn clean install -DskipTests'
+				sh 'mvn clean install -DskipTests'
 			}
 		}
 
 		stage('Deploy') {
 			steps {
-			    bat 'docker build -t andrew/spring-boot-cicd:latest .'
+			    sh 'docker build -t andrew/spring-boot-cicd:latest .'
 			}
 		}
 	}
