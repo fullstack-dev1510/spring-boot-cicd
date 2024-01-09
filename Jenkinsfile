@@ -20,7 +20,7 @@ pipeline {
 
 		stage('Deploy') {
 			steps {
-			    sh 'docker build -t andrew/spring-boot-cicd:latest .'
+			    sh 'nohup ./mvnw spring-boot:run -Dserver.port=8002 &'
 			}
 		}
 	}
