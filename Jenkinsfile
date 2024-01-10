@@ -8,11 +8,7 @@ pipeline {
     
     
  stages {
-      
-      stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+     
       stage('checkout') {
            steps {             
                 git branch: 'master', url: 'https://github.com/fullstack-dev1510/spring-boot-cicd.git'
