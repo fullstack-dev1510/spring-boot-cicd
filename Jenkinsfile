@@ -5,10 +5,16 @@ pipeline {
     {
        maven 'maven-3.9.6'
     }
+    
+    
  stages {
+      
+      stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
       stage('checkout') {
-           steps {
-             
+           steps {             
                 git branch: 'master', url: 'https://github.com/fullstack-dev1510/spring-boot-cicd.git'
              
           }
