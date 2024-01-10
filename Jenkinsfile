@@ -3,7 +3,7 @@ pipeline {
 	
 	  tools
     {
-       maven 'jenkins-maven'
+       maven 'maven-3.9.6'
     }
  stages {
       stage('checkout') {
