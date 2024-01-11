@@ -38,7 +38,7 @@ pipeline {
             steps 
 			{
                 //sh "docker run -d -p 8003:8083 andrews/spring-boot-cicd"
-                sh "docker run --publish 8003:8080 andrews/spring-boot-cicd" 
+                sh "docker run --publish 8083:8080 andrews/spring-boot-cicd" 
                 
             }
         }
