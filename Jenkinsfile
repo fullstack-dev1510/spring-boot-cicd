@@ -30,7 +30,7 @@ pipeline {
     stage('Deploying spring container to Kubernetes') {
       steps {
         script {
-          kubernetesDeploy(configs: "deployment.yaml" ,kubeconfigId: "MINIKUBECONFIG"))
+          kubernetesDeploy(configs: "deployment.yaml" ,kubeconfigId: "MINIKUBECONFIG")
         }
       }
     }
