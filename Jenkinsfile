@@ -1,4 +1,9 @@
 pipeline {
+    tools
+    {
+       maven 'maven-3.9.6'
+    }
+    
   environment {
     dockerimagename = "andrews/spring-boot-cicd:latest"
     dockerImage = ""
@@ -9,6 +14,11 @@ pipeline {
       steps {
         git 'https://github.com/fullstack-dev1510/spring-boot-cicd.git'
       }
+    }
+    stage('Execute Maven') {
+           steps {             
+                sh 'mvn clean install'             
+          }
     }
     stage('Build image') {
       steps{
