@@ -1,23 +1,7 @@
-
-apiVersion: v1
-kind: Service
-metadata:
-  #The name of the Kubernetes Service to be created 
-  #in the Kubernetes cluster
-  name: my-service 
-spec:
-  selector:
-    app: spring-boot-cicd 
-  type: LoadBalancer #Type of the Kubernetes Service
-  ports:
-  - protocol: TCP
-    port: 8083 #Service port
-    targetPort: 8083 #The port for the React.js application container
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment #The name of the Kubernetes 
+  name: deployment #The name of the Kubernetes 
         #Deployment to be created in the Kubernetes cluster
   labels:
     app: spring-boot-cicd
@@ -38,3 +22,18 @@ spec:
         image: andrews/spring-boot-cicd:latest 
         ports:
         - containerPort: 8083 #The port for the React.js application container
+---        
+apiVersion: v1
+kind: Service
+metadata:
+  #The name of the Kubernetes Service to be created 
+  #in the Kubernetes cluster
+  name: spring-boot-cicd
+spec:
+  selector:
+    app: spring-boot-cicd 
+  type: LoadBalancer #Type of the Kubernetes Service
+  ports:
+  - protocol: TCP
+    port: 8083 #Service port
+    targetPort: 8083 #The port for the React.js application container
