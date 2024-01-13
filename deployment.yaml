@@ -4,7 +4,7 @@ kind: Service
 metadata:
   #The name of the Kubernetes Service to be created 
   #in the Kubernetes cluster
-  name: service 
+  name: my-service 
 spec:
   selector:
     app: spring-boot-cicd 
@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment #The name of the Kubernetes 
+  name: my-deployment #The name of the Kubernetes 
         #Deployment to be created in the Kubernetes cluster
   labels:
     app: spring-boot-cicd
