@@ -1,7 +1,6 @@
 pipeline {
     tools
-    {
-    
+    {    
        maven 'maven-3.9.6'
     }
     
@@ -18,7 +17,7 @@ pipeline {
     }
     stage('Execute Maven') {
            steps {             
-                bat 'mvn clean install'             
+                sh 'mvn clean install'             
           }
     }
     stage('Build image') {
