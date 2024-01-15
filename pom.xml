@@ -11,7 +11,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>spring-boot-cicd</groupId>
-	<artifactId>spring-boot-cicd</artifactId>
+	<artifactId>com.spring.cicd</artifactId>
 	<version>1.1</version>
 
 	<name>spring-boot-cicd</name>
