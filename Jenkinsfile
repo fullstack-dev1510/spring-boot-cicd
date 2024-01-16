@@ -7,6 +7,7 @@ pipeline {
     tools
     {    
        maven 'maven-3.9.6'
+       'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
     }
     
   environment {
@@ -22,7 +23,7 @@ pipeline {
     }
     stage('Execute Maven') {
            steps {             
-                sh 'mvn clean install'             
+                bat 'mvn clean install'             
           }
     }
     stage('Build image') {
