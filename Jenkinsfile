@@ -7,7 +7,7 @@ pipeline {
     tools
     {    
        maven 'maven-3.9.6'
-       'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
+       //'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
     }
     
   environment {
