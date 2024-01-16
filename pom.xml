@@ -6,23 +6,18 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.1</version>
-
-		<!--<version>2.2.2.RELEASE</version>-->
-		<relativePath /> <!-- lookup parent from repository -->
+<!--		<version>2.2.2.RELEASE</version>
+-->		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>spring-boot-cicd</groupId>
-	<artifactId>com.spring.cicd</artifactId>
+	<artifactId>spring-boot-cicd</artifactId>
 	<version>1.1</version>
 
 	<name>spring-boot-cicd</name>
 	<description>Demo project for Spring Boot</description>
-
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
+		<java.version>17</java.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
