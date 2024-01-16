@@ -1,9 +1,9 @@
 pipeline {
-    agent {
+    //agent {
 
-        label 'docker'
+        //label 'docker'
 
-    }
+    //}
     tools
     {    
        maven 'maven-3.9.6'
@@ -13,7 +13,7 @@ pipeline {
     dockerimagename = "andrews/spring-boot-cicd:latest"
     dockerImage = ""
   }
-  //agent any
+  agent any
   stages {
     stage('Checkout Source') {
       steps {
